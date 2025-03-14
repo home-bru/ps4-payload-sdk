@@ -12,6 +12,7 @@ int libSceUserService;
 int (*sceSysUtilSendSystemNotificationWithText)(int messageType, char *message);
 int (*sceSystemServiceLaunchWebBrowser)(const char *uri, void *);
 int (*sceUserServiceInitialize)(void *);
+int (*sceUserServiceGetForegroundUser)(int *user_id);
 int (*sceUserServiceGetLoginUserIdList)(SceUserServiceLoginUserIdList *);
 int (*sceUserServiceGetUserName)(int32_t userId, char *userName, const size_t size);
 int (*sceUserServiceGetInitialUser)(int32_t *);
@@ -40,6 +41,7 @@ void initUserService(void) {
   libSceUserService = sceKernelLoadStartModule("/system/common/lib/libSceUserService.sprx", 0, 0, 0, NULL, NULL);
 
   RESOLVE(libSceUserService, sceUserServiceInitialize);
+  RESOLVE(libSceUserService, sceUserServiceGetForegroundUser);
   RESOLVE(libSceUserService, sceUserServiceGetInitialUser);
   RESOLVE(libSceUserService, sceUserServiceGetLoginUserIdList);
   RESOLVE(libSceUserService, sceUserServiceGetUserName);
