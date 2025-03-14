@@ -32,6 +32,6 @@ void initAppInstUtil(void) {
   if (!appInstUtilHandle) {
     appInstUtilHandle = sceKernelLoadStartModule("/system/common/lib/libSceAppInstUtil.sprx", 0, 0, 0, NULL, NULL);
 
-    RESOLVE(bgftHandle, sceAppInstUtilInitialize);
+    RESOLVE(appInstUtilHandle, sceAppInstUtilInitialize);
   }
 }
