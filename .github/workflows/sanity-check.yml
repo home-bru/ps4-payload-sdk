@@ -20,6 +20,6 @@ jobs:
       -
         name: "Setup Environment"
         run: |
-          apt-get update
-          apt-get -y install binutils gcc make
+          sudo apt update
+          sudo apt -y install binutils gcc make
           make
