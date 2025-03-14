@@ -11,7 +11,7 @@ int libSceUserService;
 
 int (*sceSysUtilSendSystemNotificationWithText)(int messageType, char *message);
 int (*sceSystemServiceLaunchWebBrowser)(const char *uri, void *);
-int (*sceUserServiceInitialize)(void *);
+int (*sceUserServiceInitialize)(OrbisUserServiceInitializeParams * user_id);
 int (*sceUserServiceGetForegroundUser)(int *user_id);
 int (*sceUserServiceGetLoginUserIdList)(SceUserServiceLoginUserIdList *);
 int (*sceUserServiceGetUserName)(int32_t userId, char *userName, const size_t size);

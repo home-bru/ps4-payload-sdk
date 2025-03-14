@@ -12,7 +12,13 @@
 #define SCE_USER_SERVICE_MAX_LOGIN_USERS 4
 #define SCE_USER_SERVICE_MAX_USER_NAME_LENGTH 16
 
+#define ORBIS_KERNEL_PRIO_FIFO_NORMAL  0x2BC
+
 extern int (*sceSysUtilSendSystemNotificationWithText)(int messageType, char *message);
+
+typedef struct OrbisUserServiceInitializeParams {
+	uint32_t priority;
+} OrbisUserServiceInitializeParams;
 
 typedef struct SceUserServiceLoginUserIdList {
   int32_t userId[SCE_USER_SERVICE_MAX_LOGIN_USERS];
