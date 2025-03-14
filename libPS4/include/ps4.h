@@ -5,6 +5,7 @@
 
 #include "barrier.h"
 #include "base64.h"
+#include "bgft.h"
 #include "camera.h"
 #include "cfg.h"
 #include "debug.h"
