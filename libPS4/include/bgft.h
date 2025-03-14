@@ -50,3 +50,5 @@ extern int (*sceBgftServiceIntDownloadStartTask)(int);
 extern int (*sceBgftFinalize)(void);
 
 void initBgft(void);
+
+#endif
