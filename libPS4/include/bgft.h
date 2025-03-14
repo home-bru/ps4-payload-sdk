@@ -49,6 +49,9 @@ extern int (*sceBgftServiceIntDebugDownloadRegisterPkg)(struct bgft_download_par
 extern int (*sceBgftServiceIntDownloadStartTask)(int);
 extern int (*sceBgftFinalize)(void);
 
+extern int (*sceAppInstUtilInitialize)(void);
+
 void initBgft(void);
+void initAppInstUtil(void);
 
 #endif
