@@ -22,4 +22,5 @@ jobs:
         run: |
           sudo apt update
           sudo apt -y install binutils gcc make
+          cd libPS4
           make
